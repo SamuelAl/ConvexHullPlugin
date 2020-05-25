@@ -35,19 +35,22 @@ namespace ConvexHullPlugin
             // Select points
             if(!SelectPoints(out List<Point3d> inputPoints))
             {
+                RhinoApp.WriteLine("Error in point selection");
                 return Result.Failure;
             }
 
             // Check for errors
             if(!CheckErrors(inputPoints))
             {
+                RhinoApp.WriteLine("Error in point cloud");
                 return Result.Failure;
             }
 
             // Calculate the convex hull
-
+            Polyline convexHull = ConvexHull.CalculateCH(inputPoints);
             // Draw convex hull line
-
+            doc.Objects.AddPolyline(convexHull);
+            doc.Views.Redraw();
             return Result.Success;
         }
 

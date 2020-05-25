@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvexHull.cs" />
     <Compile Include="ConvexHullPluginCommand.cs" />
     <Compile Include="ConvexHullPluginPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
