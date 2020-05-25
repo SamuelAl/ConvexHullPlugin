@@ -31,11 +31,11 @@ namespace ConvexHullPlugin
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
-            // TODO: start here modifying the behaviour of your command.
-            // ---
-           
+            // Select points
 
-            // ---
+            // Calculate the convex hull
+
+            // Draw convex hull line
 
             return Result.Success;
         }
